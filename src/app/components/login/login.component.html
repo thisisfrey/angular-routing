@@ -1,1 +1,44 @@
-<p>login works!</p>
+<div class="d-flex align-items-center justify-content-center vh-100 vw-100">
+  <div class="card shadow" style="width:40%">
+    <div class="card-body">
+      <div class="text-center">
+        <fa-icon [icon]="faLock" class="fa-3x"></fa-icon>
+      </div>
+      <h3 class="card-title text-center">Welcome</h3>
+      <p style="color: lightslategray; text-align: center">
+        Please enter your login details
+      </p>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <input
+            type="email"
+            id="email"
+            placeholder="Email"
+            class="form-control"
+            formControlName="email"
+            name="email"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            class="form-control"
+            formControlName="password"
+            name="password"
+          />
+        </div>
+        <input
+          type="submit"
+          class="btn btn-primary w-100"
+          value="Login"
+          name=""
+        />
+      </form>
+    </div>
+    <div class="card-footer text-start">
+      <a class="text-body-secondary"routerLink="../forgot-password">Forgot Password</a>
+    </div>
+  </div>
+</div>
