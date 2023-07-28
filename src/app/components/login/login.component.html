@@ -1,14 +1,14 @@
 <div class="d-flex align-items-center justify-content-center vh-100 vw-100">
-  <div class="card shadow" style="width:40%">
-    <div class="card-body">
+  <div class="card shadow login-card">
+    <div class="card-body p-5">
       <div class="text-center">
         <fa-icon [icon]="faLock" class="fa-3x"></fa-icon>
       </div>
-      <h3 class="card-title text-center">Welcome</h3>
+      <h3 class="card-title text-center mt-2">Welcome</h3>
       <p style="color: lightslategray; text-align: center">
         Please enter your login details
       </p>
-      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="mt-5">
         <div class="form-group">
           <input
             type="email"
@@ -37,8 +37,8 @@
         />
       </form>
     </div>
-    <div class="card-footer text-start">
-      <a class="text-body-secondary"routerLink="../forgot-password">Forgot Password</a>
+    <div class="card-footer text-end">
+      <button class="btn text-body-secondary" [routerLink]="'/forgot-password'">Forgot Password</button>
     </div>
   </div>
 </div>

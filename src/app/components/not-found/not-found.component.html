@@ -4,9 +4,8 @@
     <h1>Oops!</h1>
     <p class="text-secondary">Sorry, an error has occured, requested page not found!</p>
     <div class="mt-3">
-      <!-- TODO: Add link to button-->
-      <button class="btn btn-primary">Take Me Home</button>
-      <button class="btn"> Contact Support</button>
+      <button class="btn btn-primary" [routerLink]="'/'">Take Me Home</button>
+      <button class="btn" [routerLink]="'/contact'"> Contact Support</button>
     </div>
   </div>
 </div>
