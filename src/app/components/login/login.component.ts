@@ -11,17 +11,23 @@ import { faLock } from '@fortawesome/free-solid-svg-icons';
 })
 export class LoginComponent implements OnInit {
   faLock = faLock;
+
   loginForm = new FormGroup({
     email: new FormControl(''),
     password: new FormControl(''),
   });
-  constructor(private auth: AuthService, private router: Router) {}
+
+  constructor(
+    private auth: AuthService,
+    private router: Router,
+  ) {}
 
   ngOnInit(): void {
     if (this.auth.isLoggedIn()) {
       this.router.navigate(['admin']);
     }
   }
+
   onSubmit(): void {
     if (this.loginForm.valid) {
       this.auth.login(this.loginForm.value).subscribe(
@@ -31,7 +37,7 @@ export class LoginComponent implements OnInit {
         },
         (err: Error) => {
           alert(err.message);
-        }
+        },
       );
     }
   }
