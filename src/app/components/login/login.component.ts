@@ -36,7 +36,8 @@ export class LoginComponent implements OnInit {
           this.router.navigate(['/admin']);
         },
         (err: Error) => {
-          alert(err.message);
+          //alert(err.message);
+          alert(err.message + 'Email: admin@admin.com, Password: admin123');
         },
       );
     }

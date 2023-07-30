@@ -26,9 +26,9 @@ export class AuthService {
   }
 
   login({ email, password }: any): Observable<any> {
-    if (email === 'admin@angular-routing.com' && password === 'admin123') {
+    if (email === 'admin@admin.com' && password === 'admin123') {
       this.setToken('abcdefghijklmnopqrstuvwxyz');
-      return of({ name: 'Admin', email: 'admin@angular-routing.com' });
+      return of({ name: 'Admin', email: 'admin@admin.com' });
     }
     return throwError(new Error('Failed to login'));
   }

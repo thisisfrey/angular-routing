@@ -10,6 +10,7 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ServicesComponent } from './components/services/services.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { EmployeesComponent } from './components/employees/employees.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     AboutComponent,
     ContactComponent,
     ServicesComponent,
+    EmployeesComponent,
   ],
   imports: [CommonModule, AdminRoutingModule, FontAwesomeModule],
 })

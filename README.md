@@ -8,7 +8,7 @@
 
 ## Login
 
-- email: admin@angular-routing.com
+- email: admin@admin.com
 - password: admin123
 
 ## Demo
